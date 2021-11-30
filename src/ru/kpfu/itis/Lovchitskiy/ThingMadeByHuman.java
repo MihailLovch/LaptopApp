@@ -1,4 +1,6 @@
-import java.util.Objects; 
+package ru.kpfu.itis.Lovchitskiy;
+
+import java.util.Objects;
 
 public abstract class ThingMadeByHuman{
     protected String inventor;
@@ -12,11 +14,11 @@ public abstract class ThingMadeByHuman{
             return false;
         }
         ThingMadeByHuman thingMadeByHuman = (ThingMadeByHuman) o;
-        return (this.yearOfInvention == thingMadeByHuman.yearOfInvention) && (this.inventor == thingMadeByHuman.inventor) ;
+        return (this.yearOfInvention == thingMadeByHuman.yearOfInvention) && (this.inventor.equals(thingMadeByHuman.inventor)) ;
     }
     @Override
     public String toString(){
-        return "ThingMadeByHuman: inventor:" + this.inventor + " yearOfInvention:" + this.yearOfInvention;
+        return "ru.kpfu.itis.Lovchitskiy.ThingMadeByHuman: inventor:" + this.inventor + " yearOfInvention:" + this.yearOfInvention;
     }
     @Override
     public int hashCode(){

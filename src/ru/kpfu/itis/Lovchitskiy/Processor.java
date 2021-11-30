@@ -1,9 +1,13 @@
+package ru.kpfu.itis.Lovchitskiy;
+
+import ru.kpfu.itis.Lovchitskiy.Interfaces.Replaceable;
+
 import java.util.Objects;
 
-public class Processor extends ComputerComponent{
+public class Processor extends ComputerComponent implements Replaceable {
     public int temperature;
     public boolean isLapWorking;
-    private int criticalTemp;
+    private final int criticalTemp;
     public void checkTemperature(){
         System.out.println("Current GPU temperature : " + temperature);
         if (temperature >= criticalTemp){
@@ -18,9 +22,12 @@ public class Processor extends ComputerComponent{
         this.isLapWorking = isLapWorking;
         this.criticalTemp = criticalTemp;
     }
+    public void replace(){
+        System.out.println("ru.kpfu.itis.Lovchitskiy.Processor was replaced");
+    }
     @Override
     public String toString(){
-        return super.toString() + " Processor: temperature: " + temperature + " isLapWorking: " + isLapWorking +
+        return super.toString() + " ru.kpfu.itis.Lovchitskiy.Processor: temperature: " + temperature + " isLapWorking: " + isLapWorking +
         " criticalTemp: " + criticalTemp;
     }
     @Override

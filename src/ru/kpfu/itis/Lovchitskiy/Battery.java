@@ -1,18 +1,19 @@
+package ru.kpfu.itis.Lovchitskiy;
+
+import ru.kpfu.itis.Lovchitskiy.Interfaces.Chargeable;
+import ru.kpfu.itis.Lovchitskiy.Interfaces.GivesNotifications;
+
 import java.util.Objects;
 
-public class Battery extends EnergyHolder{
+public class Battery extends EnergyHolder implements GivesNotifications, Chargeable {
     public int chargePercent;
     public double maxTimeOfWorking;
     public double curTimeOfWorking;
     public boolean giveBatteryNotification(){
-        if (chargePercent <= 20 & chargePercent > 0){
-            return true;
-        }
-        return false;
+        return chargePercent <= 20 & chargePercent > 0;
     }
     public double giveRestTimeOfWorking(){
-        double restTime = chargePercent* curTimeOfWorking / (100 -chargePercent);
-        return restTime;
+        return chargePercent* curTimeOfWorking / (100 -chargePercent);
     }
     public Battery(int chargePercent, double maxTimeOfWorking, double curTimeOfWorking, int maxVolume, int timeOfStorage){
         super(maxVolume,timeOfStorage);
@@ -26,7 +27,7 @@ public class Battery extends EnergyHolder{
     }
     @Override
     public String toString(){
-        return super.toString() + " Battery: chargePercent: " + chargePercent + " maxTimeOfWorking: " + 
+        return super.toString() + " ru.kpfu.itis.Lovchitskiy.Battery: chargePercent: " + chargePercent + " maxTimeOfWorking: " +
         maxTimeOfWorking + " curTimeOfWorking: " + curTimeOfWorking; 
     }
     @Override
@@ -45,5 +46,9 @@ public class Battery extends EnergyHolder{
         Battery battery = (Battery) o;
         return super.equals(o) & (this.chargePercent == battery.chargePercent)
         &(this.maxTimeOfWorking == battery.maxTimeOfWorking) & (this.curTimeOfWorking == battery.curTimeOfWorking);
+    }
+
+    public void startCharging() {
+        System.out.println("Is charging now!");
     }
 }

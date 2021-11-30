@@ -1,3 +1,5 @@
+package ru.kpfu.itis.Lovchitskiy;
+
 public class App{
     public static void main(String[] args){
         Laptop lap = new Laptop("Lenovo", 5, true, "Messi", 2005);

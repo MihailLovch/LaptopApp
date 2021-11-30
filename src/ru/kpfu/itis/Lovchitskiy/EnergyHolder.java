@@ -1,3 +1,5 @@
+package ru.kpfu.itis.Lovchitskiy;
+
 import java.util.Objects;
 
 public abstract class EnergyHolder{
@@ -9,7 +11,7 @@ public abstract class EnergyHolder{
     }
     @Override
     public String toString(){
-        return "EnergyHolder: maxVolume: " + maxVolume + " timeOfStorage: "+ timeOfStorage; 
+        return "ru.kpfu.itis.Lovchitskiy.EnergyHolder: maxVolume: " + maxVolume + " timeOfStorage: "+ timeOfStorage;
     }
     @Override
     public int hashCode(){

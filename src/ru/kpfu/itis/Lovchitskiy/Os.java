@@ -1,3 +1,5 @@
+package ru.kpfu.itis.Lovchitskiy;
+
 import java.util.Objects;
 
 public class Os extends Version{
@@ -10,7 +12,7 @@ public class Os extends Version{
     }
     @Override
     public String toString(){
-        return super.toString() + "Os: year: " + year + " name: " + name;
+        return super.toString() + "ru.kpfu.itis.Lovchitskiy.Os: year: " + year + " name: " + name;
     }
     @Override
     public int hashCode(){
@@ -25,6 +27,6 @@ public class Os extends Version{
             return false;
         }
         Os os = (Os) o;
-        return super.equals(o) & (this.year == os.year) & (this.name == os.name);
+        return super.equals(o) & (this.year == os.year) & (this.name.equals(os.name));
     }
 }

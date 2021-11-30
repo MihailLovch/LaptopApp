@@ -1,3 +1,5 @@
+package ru.kpfu.itis.Lovchitskiy;
+
 import java.util.Objects;
 
 public abstract class Mechanism extends ThingMadeByHuman{
@@ -5,7 +7,7 @@ public abstract class Mechanism extends ThingMadeByHuman{
     protected boolean isDifficult;
     @Override
     public String toString(){
-        return super.toString() + " Mechanism: weight:" + weight + " isDifficult:" + isDifficult;
+        return super.toString() + " ru.kpfu.itis.Lovchitskiy.Mechanism: weight:" + weight + " isDifficult:" + isDifficult;
     }
     @Override
     public boolean equals(Object o){

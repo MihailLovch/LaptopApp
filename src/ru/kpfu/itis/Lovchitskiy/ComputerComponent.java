@@ -1,3 +1,5 @@
+package ru.kpfu.itis.Lovchitskiy;
+
 import java.util.Objects;
 
 public abstract class ComputerComponent{
@@ -11,7 +13,7 @@ public abstract class ComputerComponent{
     }
     @Override
     public String toString(){
-        return "ComputerComponent: yearOfRelease: " + yearOfRelease + " brand:" + brand + " serialNumber" + serialNumber;
+        return "ru.kpfu.itis.Lovchitskiy.ComputerComponent: yearOfRelease: " + yearOfRelease + " brand:" + brand + " serialNumber" + serialNumber;
     }
     @Override
     public int hashCode(){
@@ -26,7 +28,7 @@ public abstract class ComputerComponent{
             return false;
         }
         ComputerComponent computerComponent = (ComputerComponent) o;
-        return (this.yearOfRelease == computerComponent.yearOfRelease) & (this.brand == computerComponent.brand) & 
+        return (this.yearOfRelease == computerComponent.yearOfRelease) & (this.brand.equals(computerComponent.brand)) &
         (this.serialNumber == computerComponent.serialNumber);
     }
 }

@@ -7,6 +7,7 @@ public class Laptop extends Mechanism implements  CanPlayMusic {
     public Battery battery;
     public Processor processor;
     public String brand;
+    @Override
     public String toString(){
         return super.toString() + " Lap: brand:" + brand;  
     }

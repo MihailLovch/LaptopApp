@@ -22,7 +22,7 @@ public abstract class ThingMadeByHuman{
     }
     @Override
     public int hashCode(){
-        return Objects.hash(yearOfInvention)*11+Objects.hash(inventor)*13 + super.hashCode();
+        return Objects.hash(yearOfInvention)*11+Objects.hash(inventor)*13;
     } 
     public ThingMadeByHuman(String inventor, int yearOfInvention){
         this.yearOfInvention = yearOfInvention;

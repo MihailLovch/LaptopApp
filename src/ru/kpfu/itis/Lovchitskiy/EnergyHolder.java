@@ -15,7 +15,7 @@ public abstract class EnergyHolder{
     }
     @Override
     public int hashCode(){
-        return super.hashCode() + Objects.hash(maxVolume)*43 + Objects.hash(timeOfStorage)*53;
+        return Objects.hash(maxVolume)*43 + Objects.hash(timeOfStorage)*53;
     }
     @Override
     public boolean equals(Object o){

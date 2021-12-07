@@ -36,7 +36,7 @@ public class Version implements Updatable {
     }
     @Override
     public int hashCode(){
-        return super.hashCode() + 19* Objects.hash(isUpdated) + 23 * Objects.hash(isUpdateNotDownloaded);
+        return 19* Objects.hash(isUpdated) + 23 * Objects.hash(isUpdateNotDownloaded);
     }
     @Override
     public boolean equals(Object o){

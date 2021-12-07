@@ -17,7 +17,7 @@ public abstract class ComputerComponent{
     }
     @Override
     public int hashCode(){
-        return super.hashCode() + Objects.hash(yearOfRelease)*3 + Objects.hash(brand)*5 + Objects.hash(serialNumber)*7;
+        return  Objects.hash(yearOfRelease)*3 + Objects.hash(brand)*5 + Objects.hash(serialNumber)*7;
     }
     @Override
     public boolean equals(Object o){
